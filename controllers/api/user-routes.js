@@ -13,4 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// get by user id
+
+
 module.exports = router;
