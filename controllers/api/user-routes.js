@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { User, Post, Comment, Vote } = require('../../models');
 
-// get all users
+// User CRUD operations
+// GET all Users
 router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
@@ -13,7 +14,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// get by user id
+// GET by User id
 router.get('/:id', (req, res) => {
     User.findOne({
         attributes: { exclude: ['password'] },
@@ -53,5 +54,30 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+// POST - create route
+router.post('/', (req, res) => {
+
+})
+
+// POST - login route
+router.post('/login', (req, res) => {
+
+})
+
+// POST - logout route
+router.post('/logout', (req, res) => {
+
+})
+
+// PUT - update by User id 
+router.put('/:id', (req, res) => {
+
+})
+
+// DELETE - delete by User id
+router.delete('/:id', (req, res) => {
+    
+})
 
 module.exports = router;
