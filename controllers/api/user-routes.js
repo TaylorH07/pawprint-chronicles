@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// POST - create route
+// POST - create user route
 router.post('/', (req, res) => {
 
 })
@@ -77,7 +77,7 @@ router.put('/:id', (req, res) => {
 
 // DELETE - delete by User id
 router.delete('/:id', (req, res) => {
-    
+
 })
 
 module.exports = router;
