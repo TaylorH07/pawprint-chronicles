@@ -1,8 +1,9 @@
+// import the Vote model
 const Vote = require('./Vote');
 
 
 
-
+// create the associations
 User.belongsToMany(Post, {
     through: Vote,
     as: 'voted_posts',
@@ -22,5 +23,5 @@ User.belongsToMany(Post, {
 
 
 
-
-  
+// export Vote along with User and Post
+  module.exports = { User, Post, Vote };
