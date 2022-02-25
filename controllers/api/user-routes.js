@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, Vote } = require('../../models');
+const { User } = require('../../models');
 
 // User CRUD operations
 // GET all Users
@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
     })
     .then(userData => {
         if (!userData) {
-            res.status(404).json({ message: 'No pup parents with this ID'})
+            res.status(404).json({ message: 'No pawrents with this ID'})
             return;
         }
         res.json(userData);
@@ -86,7 +86,7 @@ router.post('/login', (req, res) => {
     })
     .then(userData => {
         if (!userData) {
-            res.status(400).json({ message: 'No pup parents with that email address' });
+            res.status(400).json({ message: 'No pawrents with that email address' });
             return;
         }
 
@@ -102,7 +102,7 @@ router.post('/login', (req, res) => {
             req.session.username = userData.username;
             req.session.loggedIn = true;
 
-            res.json({ user: userData, message: 'Congragulations, you are now logged in!' })
+            res.json({ user: userData, message: 'Congratulations, you are now logged in!' })
         })
     })
 });
@@ -117,27 +117,6 @@ router.post('/logout', (req, res) => {
     else {
         res.status(404).end();
     }
-});
-
-// PUT - update by User id 
-router.put('/:id', (req, res) => {
-    User.update(req.body, {
-        individualHooks: true,
-        where: {
-            id: req.params.id
-        }
-    })
-    .then(userData => {
-        if (!userData) {
-            res.status(404).json({ message: 'No pup parent discovered with this id'})
-            return;
-        }
-        res.json(userData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
 });
 
 // DELETE - delete by User id
