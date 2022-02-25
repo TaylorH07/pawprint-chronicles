@@ -1,0 +1,1 @@
+const Vote = require('./Vote');
