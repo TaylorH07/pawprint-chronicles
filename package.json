@@ -19,7 +19,10 @@
   "homepage": "https://github.com/TaylorH07/pawprint-chronicles#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+<<<<<<< HEAD
     "connect-session-sequelize": "^7.1.2",
+=======
+>>>>>>> feature/models_index
     "dotenv": "^16.0.0",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
