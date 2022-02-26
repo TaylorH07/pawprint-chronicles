@@ -29,14 +29,14 @@ Vote.init(
         }
       }
     },
-    
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'vote'
-      }
-    );
 
-    module.exports = Vote;
+    {
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'vote'
+    }
+  );
+
+  module.exports = Vote;
