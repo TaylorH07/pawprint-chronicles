@@ -39,27 +39,6 @@ static upvote(body, models) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // create fields/columns for Post model
 Post.init(
     {
