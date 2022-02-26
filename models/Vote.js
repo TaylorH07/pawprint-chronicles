@@ -38,3 +38,5 @@ Vote.init(
         modelName: 'vote'
       }
     );
+
+    module.exports = Vote;
