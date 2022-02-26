@@ -1,5 +1,9 @@
 // import the Vote model
 const Vote = require('./Vote');
+// import the User model
+const User = require("./User")
+//import the Post model
+const Post = require("./Post");
 
 
 
