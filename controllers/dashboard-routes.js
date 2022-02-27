@@ -9,7 +9,7 @@ router.get('/', withAuth, (req, res) => {
     console.log('======================');
     Post.findAll({
         where: {
-            userId: req.session.userId
+            user_id: req.session.user_id
         },
         attributes: [
             'id',

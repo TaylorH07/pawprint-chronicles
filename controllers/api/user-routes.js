@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
     })
     .then(userData => {
         req.session.save(() => {
-            req.session.userId = userData.id;
+            req.session.user_id = userData.id;
             req.session.username = userData.username;
             req.session.loggedIn = true;
 
@@ -98,7 +98,7 @@ router.post('/login', (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.userId = userData.id;
+            req.session.user_id = userData.id;
             req.session.username = userData.username;
             req.session.loggedIn = true;
 

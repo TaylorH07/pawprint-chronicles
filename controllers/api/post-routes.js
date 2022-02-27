@@ -53,7 +53,7 @@ router.post('/', withAuth, (req, res) => {
 
 // PUT upvote route
 router.put('/upvote', withAuth, (req, res) => {
-    Post.upvote({ ...req.body, userId: req.session.userId }, { Vote, Comment, User })
+    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
     .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
       console.log(err);
