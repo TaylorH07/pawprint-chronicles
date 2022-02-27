@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post, Comment, Vote } = require('../../models');
 
 // User CRUD operations
 // GET all Users
@@ -102,9 +102,9 @@ router.post('/login', (req, res) => {
             req.session.username = userData.username;
             req.session.loggedIn = true;
 
-            res.json({ user: userData, message: 'Congratulations, you are now logged in!' })
-        })
-    })
+            res.json({ user: userData, message: 'Congratulations, you may now enter the Pawprint Chronicles!' })
+        });
+    });
 });
 
 // POST - logout route
@@ -118,6 +118,28 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
+
+// PUT - update route
+router.put('/:id', (req, res) => {
+    User.update(req.body, {
+        individualHooks: true,
+        where: {
+          id: req.params.id
+        }
+    })
+    .then(userData => {
+        if (!userData) {
+            res.status(404).json({ message: 'No pawrent found with this id' });
+            return;
+        }
+        res.json(userData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+
 
 // DELETE - delete by User id
 router.delete('/:id', (req, res) => {
