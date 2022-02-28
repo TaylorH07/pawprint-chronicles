@@ -150,7 +150,7 @@ router.delete('/:id', (req, res) => {
     })
     .then(userData => {
         if (!userData) {
-            res.status(404).json({ message: 'Sorry, no pup pawrents found with this id' });
+            res.status(404).json({ message: 'Sorry, no pawrents found with this id' });
             return;
         }
         res.json(userData)
