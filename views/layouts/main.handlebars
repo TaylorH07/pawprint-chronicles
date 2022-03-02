@@ -13,18 +13,31 @@
    
 </head>
 
+
 <body class="flex-column min-100-vh">
-    <nav class="navbar">
-        <ul>
-            <li class="li-inline nav-item"><a href="/">Home</a></li>
-            <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-            <li class="li-inline nav-item"><a href="/login">Login</a></li>
-            <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <h1 class="app-title"><a href="/">The Pawprint Chronicles</a></h1>
-    </header>
+
+   <nav>
+    <div class="nav-wrapper blue lighten-3">
+      <a href="#!" class="brand-logo left"> 
+    <i class="large material-icons">pets</i> Pawprint Chronicles</a>
+      <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/sign-up">Sign Up</a></li>
+        <li><a href="/login" id="logout-link">login</a></li>
+
+      </ul>
+    </div>
+  </nav>
+    
+    <ul class="right sidenav" id="mobile-demo">
+       <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="#" id="logout-link">logout</a></li>
+
+  </ul>
 
     <main class="col-auto">
         {{{body}}}
