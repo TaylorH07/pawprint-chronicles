@@ -1,23 +1,29 @@
 <div class="card">
     <div class="card-header">
-        <h2>Login</h2>
+        <h2 class="pink-text text-lighten-4">Login</h2>
     </div>
-    <form id="login-form" class="card-body">
-        <div>
-            <label for="username-input-login">Username</label>
-            <input type="text" id="username-input-login" />
+    <div class="row">
+        <form class="col s8">
+        <div class="row">
+        <div class="input-field col s4">
+          <input id="username" type="password" class="validate">
+          <label for="username">Username</label>
         </div>
-        <div>
-            <label for="password-input-login" class="form-label">Password</label>
-            <input type="password" id="password-input-login" />
+      </div>
+        <div class="row">
+        <div class="input-field col s4">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
         </div>
-        <button type="submit" id="login-btn" class="btn waves-effect blue lighten-3 hoverable">
+      </div>
+         <button type="submit" id="login-btn" class="medium btn waves-effect blue lighten-3 hoverable">
         <i class="small material-icons">pets</i>Login</button>
-        <div>
-
+        <br>
+            <br></br>
         <a type="button" href="/signup">Sign up instead</a>
         </div>
-    </form>
-</div>
+        </form>
+    </div>
+
 
 <script src="/public/js/login.js"></script>
