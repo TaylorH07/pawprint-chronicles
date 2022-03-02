@@ -33,15 +33,15 @@ router.get('/', withAuth, (req, res) => {
             }
         ]
     })
-    .then(postData => {
-        const posts = postData.map((post) => post.get({ plain: true }));
+        .then(postData => {
+            const posts = postData.map((post) => post.get({ plain: true }));
 
-        res.render('dashboard', { posts, loggedIn: true });
-    })
-    .catch(err => {
-       console.log(err);
-       res.status(500).json(err);
-    });
+            res.render('dashboard', { posts, loggedIn: true });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 // GET - get/edit posts by id
@@ -60,8 +60,8 @@ router.get('/edit/:id', withAuth, (req, res) => {
                 model: Comment,
                 attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
-                model: User,
-                attributes: ['username']
+                    model: User,
+                    attributes: ['username']
                 }
             },
             {
@@ -70,22 +70,22 @@ router.get('/edit/:id', withAuth, (req, res) => {
             }
         ]
     })
-    .then(postData => {
-        if (postData) {
-            const post = postData.get({ plain: true });
-            
-            res.render('edit-post', {
-                post,
-                loggedIn: true
-            });
-        } else {
-            
-            res.status(404).end();
-        }
-    })
-    .catch(err => {
-        res.status(500).json(err);
-    });
+        .then(postData => {
+            if (postData) {
+                const post = postData.get({ plain: true });
+
+                res.render('edit-post', {
+                    post,
+                    loggedIn: true
+                });
+            } else {
+
+                res.status(404).end();
+            }
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;
