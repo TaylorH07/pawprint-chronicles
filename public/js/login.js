@@ -21,3 +21,9 @@
     }
 }
 document.querySelector('.login-btn').addEventListener('submit',loginFormHandler);
+
+// hamburger btn event listener
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
