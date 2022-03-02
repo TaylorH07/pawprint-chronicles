@@ -72,13 +72,6 @@ User.belongsToMany(Post, {
     foreignKey: 'post_id'
   });
 
- 
-  
-
-
-
-
-
 
 // export Vote along with User and Post
-  module.exports = { User, Post, Vote, Comment };
+module.exports = { User, Post, Vote, Comment };

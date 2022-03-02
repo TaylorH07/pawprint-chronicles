@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
     .then((postData) => {
         const posts = postData.map((post) => post.get({ plain: true }));
 
-        res.render('homepage', {
+        res.render('all-posts', {
             posts,
             loggedIn: req.session.loggedIn
         });
