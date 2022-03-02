@@ -4,7 +4,7 @@ const { User, Post, Comment, Vote } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
-    
+
     console.log('======================');
 
     Post.findAll({
@@ -30,18 +30,18 @@ router.get('/', (req, res) => {
             }
         ]
     })
-    .then((postData) => {
-        const posts = postData.map((post) => post.get({ plain: true }));
+        .then((postData) => {
+            const posts = postData.map((post) => post.get({ plain: true }));
 
-        res.render('all-posts', {
-            posts,
-            loggedIn: req.session.loggedIn
+            res.render('all-posts', {
+                posts,
+                loggedIn: req.session.loggedIn
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
         });
-    })
-    .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-    });
 });
 
 // get single user post
@@ -72,23 +72,23 @@ router.get('/post/:id', (req, res) => {
             }
         ]
     })
-    .then((postData) => {
-        if (!postData) {
-            res.status(404).json({ message: 'No post found with this pawrents id' });
-            return;
-        }
-    
-        const post = postData.get({ plain: true });
-    
-        res.render('single-post', {
-            post,
-            loggedIn: req.session.loggedIn
+        .then((postData) => {
+            if (!postData) {
+                res.status(404).json({ message: 'No post found with this pawrents id' });
+                return;
+            }
+
+            const post = postData.get({ plain: true });
+
+            res.render('single-post', {
+                post,
+                loggedIn: req.session.loggedIn
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
         });
-    })
-    .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-    });
 });
 
 //GET - login
@@ -99,6 +99,11 @@ router.get('/login', (req, res) => {
     }
 
     res.render('login');
+});
+
+// Sign-up
+router.get('/sign-up', (req, res) => {
+    res.render('sign-up');
 });
 
 module.exports = router;
