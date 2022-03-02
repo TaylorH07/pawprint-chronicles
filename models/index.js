@@ -24,7 +24,7 @@ User.belongsToMany(Post, {
     through: Vote,
     as: 'voted_posts',
     foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    // onDelete: 'SET NULL'
 
   });
   
@@ -32,7 +32,7 @@ User.belongsToMany(Post, {
     through: Vote,
     as: 'voted_posts',
     foreignKey: 'post_id',
-    onDelete: 'SET NULL'
+    // onDelete: 'SET NULL'
   });
 
   Vote.belongsTo(User, {
@@ -42,7 +42,7 @@ User.belongsToMany(Post, {
   
   Vote.belongsTo(Post, {
     foreignKey: 'post_id',
-    onDelete: 'SET NULL'
+    // onDelete: 'SET NULL'
   });
   
   User.hasMany(Vote, {
@@ -60,7 +60,7 @@ User.belongsToMany(Post, {
   
   Comment.belongsTo(Post, {
     foreignKey: 'post_id',
-    onDelete: 'SET NULL'
+    // onDelete: 'SET NULL'
   });
   
   User.hasMany(Comment, {

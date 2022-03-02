@@ -10,7 +10,7 @@ body, html {
     color: #333;
 }
 
-a {
+ul a {
     text-decoration: none;
     color: #225ca3;
     font-weight: bold;
