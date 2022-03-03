@@ -20,17 +20,7 @@ async function loginFormHandler(event) {
         }
     }
 }
-<<<<<<< HEAD
-document.querySelector('.login-btn').addEventListener('submit',loginFormHandler);
-
-// hamburger btn event listener
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
-=======
 
 document.querySelector('.login-btn').addEventListener('submit', loginFormHandler);
 
 
->>>>>>> c2692156e36e82be4c9c1b2313e150fd1cf06cf2

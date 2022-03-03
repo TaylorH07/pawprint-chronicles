@@ -12,7 +12,7 @@
 Pawprint Chronicles is a full-stack web application where users can post about man’s best friend! Users can post, upvote, and comment on posts all about dogs. The application is built with sequelize, an object mapping (ORM) library, to simplify MySQL queries, and add password hashing so that users can create secure passwords.
 
 ## [Installation](#table-of-contents)
-The user should clone the repository from GitHub. This application requires Node.js, Express.js, Sequelize, Dotenv, bcrypt, MySQL2, and Handlebars, .
+The user should clone the repository from GitHub. This application requires Node.js, Express.js, Sequelize, Dotenv, bcrypt, MySQL2, and Handlebars.
 
 ## [Usage](#table-of-contents)
 In this application users can sign-up or log-in to the dashboard. Then users can post, upvote, and comment on posts.
