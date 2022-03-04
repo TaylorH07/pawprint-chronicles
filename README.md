@@ -15,7 +15,13 @@ Pawprint Chronicles is a full-stack web application where users can post about m
 The user should clone the repository from GitHub. This application requires Node.js, Express.js, Sequelize, Dotenv, bcrypt, MySQL2, and Handlebars.
 
 ## [Usage](#table-of-contents)
-In this application users can sign-up or log-in to the dashboard. Then users can post, upvote, and comment on posts.
+First, users are greated by our homepage. Then, users can sign-up or log-in to the dashboard. In the dashboard, users can post, upvote, and comment on posts.
+
+![homepage.png]()
+
+![signup.png]()
+
+![login.png]()
 
 ## [Contributing](#table-of-contents)
 [Hiba Ali](https://github.com/Hibo-ali), 
