@@ -17,6 +17,10 @@ The user should clone the repository from GitHub. This application requires Node
 ## [Usage](#table-of-contents)
 First, users are greated by our homepage. Then, users can sign-up or log-in to the dashboard. In the dashboard, users can post, upvote, and comment on posts.
 
+See our application on Heroku!
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-getting-started)
+
 ![homepage.png](https://github.com/TaylorH07/pawprint-chronicles/blob/develop/public/images/homepage.png)
 
 ![signup.png](https://github.com/TaylorH07/pawprint-chronicles/blob/develop/public/images/signup.png)
