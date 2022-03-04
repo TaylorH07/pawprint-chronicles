@@ -4,7 +4,7 @@ const { Post, User, Comment, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Get all posts for dashboard
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
     console.log(req.session);
     console.log('======================');
     Post.findAll({
@@ -36,7 +36,7 @@ router.get('/', withAuth, (req, res) => {
         .then(postData => {
             const posts = postData.map((post) => post.get({ plain: true }));
 
-            res.render('dashboard', { posts, loggedIn: true });
+            res.render('all-posts', { posts, loggedIn: true });
         })
         .catch(err => {
             console.log(err);
