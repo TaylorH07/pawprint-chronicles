@@ -113,12 +113,7 @@
 <body class="flex-column min-100-vh">
 
   <nav>
-    {{#if loggedIn}}
-    <a href="/dashboard">dashboard</a>
-    <button id="logout" class="btn-no-style">logout</button>
-    {{else}}
-    <a href="/login">login</a>
-    {{/if}}
+
   </nav>
 
 
@@ -131,9 +126,15 @@
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
+        
+        {{#if loggedIn}}
         <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/login" id="login-btn">Login</a></li>
-        <li><a href="/sign-up" id="signup-btn">Sign Up</a></li>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/sign-up">Sign Up</a></li>
+        {{/if}}
+        
 
       </ul>
     </div>
