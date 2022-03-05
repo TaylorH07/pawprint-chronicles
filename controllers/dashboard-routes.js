@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
         .then(postData => {
             const posts = postData.map((post) => post.get({ plain: true }));
 
-            res.render('all-posts', { posts, loggedIn: true });
+            res.render('dashboard', { posts, loggedIn: true });
         })
         .catch(err => {
             console.log(err);
@@ -87,5 +87,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
+
+
 
 module.exports = router;
