@@ -88,6 +88,11 @@ router.get('/edit/:id', withAuth, (req, res) => {
         });
 });
 
-
+// new post
+router.get("/new", withAuth, (req, res) => {
+    res.render("new-posts", {
+        layout: "main"
+    });
+});
 
 module.exports = router;
