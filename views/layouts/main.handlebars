@@ -7,7 +7,8 @@
   <title>The Pawprint Chronicles</title>
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  {{!-- <link rel="stylesheet" type="text/css" href="/public/css/materialize.css" media="screen,projection"> --}}
+  {{!--
+  <link rel="stylesheet" type="text/css" href="/public/css/materialize.css" media="screen,projection"> --}}
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -110,6 +111,16 @@
 
 
 <body class="flex-column min-100-vh">
+
+  <nav>
+    {{#if loggedIn}}
+    <a href="/dashboard">dashboard</a>
+    <button id="logout" class="btn-no-style">logout</button>
+    {{else}}
+    <a href="/login">login</a>
+    {{/if}}
+  </nav>
+
 
   <nav>
     <div class="nav-wrapper blue lighten-3">
