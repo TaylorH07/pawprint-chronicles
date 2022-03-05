@@ -1,4 +1,5 @@
-async function loginFormHandler() {
+async function loginFormHandler(event) {
+    event.preventDefault();
 
     const username = document.querySelector('#username').value.trim();
     const password = document.querySelector('#password').value.trim();
@@ -13,16 +14,15 @@ async function loginFormHandler() {
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
-            document.location.replace('/dashboard/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
     }
 }
 
-document.querySelector('#login-btn').addEventListener('click', (event)=>{
-    event.preventDefault();
-    loginFormHandler();
-});
+document.querySelector('#login-btn').addEventListener('click', loginFormHandler);
+  
+
 
 

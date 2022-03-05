@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
   
 
 // POST - create post
-router.post('/', withAuth, (req, res) => {
+router.post('/new-posts', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         post_url: req.body.post_url,
