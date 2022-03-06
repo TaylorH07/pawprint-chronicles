@@ -112,10 +112,6 @@
 
 <body class="flex-column min-100-vh">
 
-  <nav>
-
-  </nav>
-
 
   <nav>
     <div class="nav-wrapper blue lighten-3">
@@ -129,7 +125,7 @@
         
         {{#if loggedIn}}
         <li><a href="/dashboard">Dashboard</a></li>
-        <button id="logout" class="btn-no-style">logout</button>
+        <button id="logout">logout</button>
         {{else}}
         <li><a href="/login">Login</a></li>
         <li><a href="/sign-up">Sign Up</a></li>
@@ -142,9 +138,17 @@
 
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/main">Home</a></li>
-    <li><a href="/dashboard">Dashboard</a></li>
+  {{#if loggedIn}}
+        <li><a href="/dashboard">Dashboard</a></li>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/sign-up">Sign Up</a></li>
+        {{/if}}
+  
+   {{!-- <li><a href="/dashboard">Dashboard</a></li>
     <li><a href="/login">Login</a></li>
-    <li><a href="/sign-up">Sign Up</a></li>
+    <li><a href="/sign-up">Sign Up</a></li> --}}
 
   </ul>
 
@@ -161,7 +165,7 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Thanks For Stopping By!</h5>
-          <p class="grey-text text-lighten-4">To get your dog featured on our site, email your favorite phots to us!
+          <p class="grey-text text-lighten-4">To get your dog featured on our site, email your favorite photos to us!
           </p>
           <p class="grey-text text-lighten-4">For any other inquiries, visit our Linkedin! </p>
 
@@ -204,7 +208,9 @@
       });
 
     </script>
+     {{#if loggedIn}}
     <script src="/js/logout.js">
+    {{/if}}
 </body >
 
 </html >

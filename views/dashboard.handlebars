@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -34,4 +34,77 @@
 <script src="/js/edit.js"></script>
 <script src="/js/delete.js"></script>
 
-</html>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pawprint Chronicles</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body class="flex-column min-100-vh">
+    {{!-- <nav class="navbar">
+        <ul class="flex-row">
+            <li class="li-inline nav-item"><a href="/">Home</a></li>
+            <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+            <li class="li-inline nav-item"><a href="/logout" id="logout-link">Logout</a></li>
+        </ul>
+    </nav> --}}
+    <header class="hero">
+        <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
+    </header>
+
+    <main class="col-auto">
+        {{{body}}}
+    </main>
+
+
+
+<section>
+  <h2>Create New Post</h2>
+
+  <form id="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">Link</label>
+      <input type="textarea" id="post-url" name="post-url" />
+    </div>
+    <button type="submit" class="btn-large waves-effect blue lighten-3 hoverable center-align">Create</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/new/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+
+
+    <footer class="footer flex-row justify-center">
+        <a href="/dashboard/new">➕ New Post</a>
+    </footer>
+</body>
+<script src="/js/new-post.js"></script>
+<script src="/js/logout.js"></script>
+<script src="/js/edit.js"></script>
+<script src="/js/delete.js"></script>
+
+</html> 
