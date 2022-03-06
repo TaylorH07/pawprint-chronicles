@@ -16,7 +16,7 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/dashboard/new');
+      document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }
