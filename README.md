@@ -19,7 +19,7 @@ First, users are greated by our homepage. Then, users can sign-up or log-in to t
 
 See our application on Heroku!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-getting-started)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://ancient-waters-18396.herokuapp.com/)
 
 ![homepage.png](https://github.com/TaylorH07/pawprint-chronicles/blob/develop/public/images/homepage.png)
 
